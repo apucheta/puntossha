@@ -1,0 +1,43 @@
+<ion-header >
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+        <ion-menu-button color = "dark"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Transferencia</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class = "ion-padding">
+  <form #form="ngForm" (ngSubmit)="confirmacion(dni, monto)">
+    <ion-grid>
+      <ion-row class="ion-justify-content-center" color = "primary">
+        <ion-col class="ion-align-self-center" size-md="6" size-lg="5" size-xs="12">
+          <div class="ion-text-center">
+            <img src="../../../assets/img/hebraica.png" height="100" width="100">
+            <h3>Transferir a otro socio</h3>
+          </div>
+          <br>
+          <div class="ion-padding">
+            <p>Usuario a transferir</p>
+            <ion-item>
+              
+              <ion-input name="dni" type="dni" placeholder="DNI" [(ngModel)] = "dni" required></ion-input>
+            </ion-item>
+            <p>Monto </p>
+            <ion-item>
+              
+              <ion-input name="monto" type="monto" placeholder="Ingrese el monto a transferir" [(ngModel)]="monto" required></ion-input>
+            </ion-item>
+          </div>
+          <div class="ion-padding">
+            <ion-button color = "dark" size="medium" type="submit" [disabled]="form.invalid" expand = "block">Transferir</ion-button>
+            <br />
+            <br />
+            <br />
+            <br />            
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </form>
+</ion-content>

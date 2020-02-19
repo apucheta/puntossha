@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "510877336534",
+    "firebase_url": "https://club-hebraica.firebaseio.com",
+    "project_id": "club-hebraica",
+    "storage_bucket": "club-hebraica.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:510877336534:android:1d04b747dfb90cc3ecda77",
+        "android_client_info": {
+          "package_name": "com.sistemas.hebraica.club"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "510877336534-dcq204hsas7hocpdfio6bkjsok70pn93.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCAl5fO7p2LX_Vy2HadPMfCX3pFcK2nAWA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "510877336534-dcq204hsas7hocpdfio6bkjsok70pn93.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

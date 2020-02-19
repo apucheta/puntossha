@@ -1,0 +1,33 @@
+<ion-content class="ion-padding" color = "primary">
+  <form #form="ngForm" (ngSubmit)="login(username, password)">
+    <ion-grid>
+      <ion-row class="ion-justify-content-center" color = "primary">
+        <ion-col class="ion-align-self-center" size-md="6" size-lg="5" size-xs="12">
+          <div class="ion-text-center">
+            <img src="../../../assets/img/hebraica.png" height="100" width="100">
+            <h3>SHA VIRTUAL</h3>
+          </div>
+          <br>
+          <div class="ion-padding">
+            <ion-item>
+              <ion-input name="username" type="username" placeholder="Usuario" [(ngModel)] = "username" required></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-input name="password" type="password" placeholder="Contraseña" [(ngModel)]="password" required></ion-input>
+            </ion-item>
+          </div>
+          <div class="ion-padding">
+            <ion-button color = "dark" size="medium" type="submit" [disabled]="form.invalid" expand = "block">Iniciar sesión</ion-button>
+            <br />
+            <br />
+            <br />
+            <br />
+            
+            <ion-button color = "dark" size = "medium" (click)="goToAcc()" expand = "block">Blanquear contraseña</ion-button>
+            
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </form>
+</ion-content>

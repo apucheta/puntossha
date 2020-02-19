@@ -1,0 +1,29 @@
+<ion-header >
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+        <ion-menu-button color = "dark"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Transferencias</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-searchbar [(ngModel)]="idsocio" (ionChange)="getSocio()"></ion-searchbar>
+  </ion-item>
+
+  <ion-list>
+    <ion-item button *ngFor = "let socio of results" >
+          <ion-item>
+          <ion-label text-wrap>
+            <p>Nombre: {{socio['Nombre']}}</p>
+            <p>DNI: {{socio['dni']}}</p>
+          </ion-label>
+          <ion-button (click)="transferirASocio(socio['dni'])">
+            Transferir
+          </ion-button>
+          </ion-item>
+    </ion-item>
+  </ion-list>
+
+</ion-content>

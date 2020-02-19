@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar color = "primary">
+    <ion-buttons slot="start">
+        <ion-menu-button color = "dark"></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="primary" padding>
+    <p text-center>Bienvenido {{nombre}}</p>
+    <p text-center>Su saldo es ${{saldo}}</p>
+    <div class="centre">
+      <ion-button class= "ion-text-center" color= "dark" (click)="comprar()">
+        Realizar operacion 
+        <ion-icon name="fastforward"> </ion-icon>
+      </ion-button>
+      <br>
+      <ion-button class= "ion-text-center" color= "dark" (click)="cargar()">
+        Cargar saldo
+        <ion-icon name="fastforward"> </ion-icon>
+      </ion-button>
+    </div>
+</ion-content>

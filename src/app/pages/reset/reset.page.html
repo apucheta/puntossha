@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Recupero de contraseña</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class = "ion-padding">
+  <form #form = "ngForm" (ngSubmit)="codigo(username)">
+    <ion-grid>
+      <ion-row class = "ion-justify-content-center">
+        <ion-col class = "ion-align-self-center">
+          <div class = "ion-text-center">
+            <h3>Recupero de contraseña</h3>
+            <p>Recibirá una notificacion con un codigo. Debe ingresar ese codigo en la proxima pantalla</p>
+            <br>
+            <div class = "ion-padding">
+              <ion-item>
+                <ion-input name = "username" type = "username" placeholder= "Ingrese su dni" [(ngModel)]="username" required></ion-input>
+              </ion-item>
+            </div>
+            <div class = "ion-padding">
+              <ion-button color = "dark" size = "medium" type="submit" [disabled]="form.invalid" expand = "block">Enviar</ion-button>
+            </div>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </form>
+
+</ion-content>

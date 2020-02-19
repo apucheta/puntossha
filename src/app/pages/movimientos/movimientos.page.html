@@ -1,0 +1,39 @@
+<style>
+  :root {
+    --ion-safe-area-top: 20px;
+    --ion-safe-area-bottom: 22px;
+  }
+</style>
+<ion-header>
+  <ion-toolbar color = "primary">
+      <ion-buttons slot="start">
+          <ion-menu-button color = "dark"></ion-menu-button>
+        </ion-buttons>
+    <ion-title>Movimientos</ion-title>
+  </ion-toolbar>
+</ion-header>    
+
+<ion-content>
+  <ion-item class = "ion-text-center" *ngFor = "let movimiento of movimientos">
+    <span *ngIf="getKeys(movimiento)">
+
+      <div *ngFor = "let key of keys">
+        <ion-card >
+          <ion-card-header>
+            <ion-card-title>Monto: ${{movimiento[key]['monto']}}</ion-card-title>
+            <ion-card-title>{{movimiento[key]['tipomovimiento']}}</ion-card-title>
+            <ion-card-subtitle>DNI: {{movimiento[key]['socio']}}</ion-card-subtitle>
+          </ion-card-header>
+          <ion-card-content>
+          <ion-label class = "ion-text-wrap">
+            <p class = "ion-text-center">Lugar: {{movimiento[key]['puntoventa']}}</p>
+            <p class = "ion-text-center">Estado: {{movimiento[key]['estado']}}</p>
+            <p class = "ion-text-center">Fecha: {{movimiento[key]['fecha']}}</p>
+          </ion-label>
+        </ion-card-content>
+        </ion-card>
+      </div>
+
+    </span>
+  </ion-item>
+</ion-content>

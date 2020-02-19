@@ -1,0 +1,29 @@
+<ion-content>
+  <form #form="ngForm" (ngSubmit)="cambiopw(password, newpassword, confirmapw)">
+      <ion-grid>
+        <ion-row class="ion-justify-content-center" color = "primary">
+          <ion-col class="ion-align-self-center" size-md="6" size-lg="5" size-xs="12">
+            <div class="ion-text-center">
+              <img src="../../../assets/img/hebraica.png" height="100" width="100">
+              <h3>Cambio de contraseña</h3>
+            </div>
+            <br>
+            <div class="ion-padding">
+              <ion-item>
+                <ion-input name="password" type="password" placeholder="Contraseña actual" [(ngModel)] = "password" required></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-input name="newpassword" type="password" placeholder="Nueva contraseña" [(ngModel)]="newpassword" required></ion-input>
+              </ion-item>
+              <ion-item>
+                  <ion-input name="confirmapw" type="password" placeholder="Repita su nueva contraseña" [(ngModel)]="confirmapw" required></ion-input>
+                </ion-item>
+            </div>
+            <div class="ion-padding">
+              <ion-button color = "dark" size="medium" type="submit" [disabled]="form.invalid" expand = "block">Enviar</ion-button>                
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </form>
+</ion-content>

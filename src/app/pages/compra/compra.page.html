@@ -1,0 +1,20 @@
+<ion-header >
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+        <ion-menu-button color = "dark"></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding" color = "primary">
+  <p class = "ion-text-center">Clickee el boton y apunte</p>
+  <p class = "ion-text-center">hacia el QR para confirmar la operacion</p>
+  <br>
+  <div class="centre">
+    <ion-button (click)="scanCode()" color = "dark">
+      <ion-icon name="qr-scanner"></ion-icon>
+      Scanear codigo
+    </ion-button>
+  </div>
+
+</ion-content>

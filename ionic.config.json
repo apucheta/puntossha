@@ -1,0 +1,7 @@
+{
+  "name": "Puntos Hebraica",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

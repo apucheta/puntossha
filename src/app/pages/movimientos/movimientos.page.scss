@@ -1,0 +1,17 @@
+ion-card{
+
+  flex-direction: column;
+  margin: 20 !important;
+  width: 300px !important;
+  
+}
+ion-content{
+background: green;
+}
+ion-content>ion-card{
+width: 100% !important;
+}
+  
+  .centre{
+    text-align: center;
+  }
